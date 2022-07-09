@@ -4,9 +4,10 @@ metadata:
   name: {{ .Release.Name }}
   namespace: default
   labels:
-    app.kubernetes.io/name: security
+    app.kubernetes.io/name: nginx app
+    app.kubernetes.io/version: "1.0.2"
   annotations:
-    cloud.google.com/load-balancer-type: Internal
+    imageregistry: "https://hub.docker.com/"
 spec:
   type: LoadBalancer
   selector:
